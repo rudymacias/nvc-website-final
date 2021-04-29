@@ -1,0 +1,126 @@
+header.hero {
+	background: #ccc;
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+	background: url("../../images/campus.jpg") center center;
+	background-size: cover;
+}
+
+header.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #5D2C85;
+    opacity: 0.8;
+    z-index: 0;
+}
+
+header.hero nav {
+	color: white;
+	display: flex;
+	position: relative;
+	z-index: 1;
+	padding: 3rem;
+}
+
+header.hero nav .brand {
+	flex: 30%;
+}
+
+header.hero nav ul {
+	flex: 70%;
+	list-style: none;
+	display: flex;
+}
+
+header.hero nav ul li a {
+	padding: 1rem 3rem;
+	color: rgba(255,255,255, 0.8);
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+header.hero nav ul li a:hover {
+	color: white;
+	text-decoration: underline;
+}
+
+header.hero .cta {
+	padding: 3rem;
+	margin-top: 20%;
+	position: relative;
+	z-index: 1;
+}
+
+header.hero h1,
+header.hero p {
+	color: white;
+}
+
+header.hero h1 {
+	font-size: 100px;
+	line-height: 10px;
+}
+
+header.hero p {
+	font-size: 20px;
+	margin-bottom: 3rem;
+}
+
+header.hero .btn {
+	background: white;
+	color: #5D2C85;
+	font-size: 35px;
+	line-height: 50px;
+	padding: 1rem 3rem;
+	text-decoration: none;
+	border-radius: 42px;
+}
+
+@media screen and (max-width: 480px) {
+	header.hero {
+		height: 500px;
+	}
+
+	header.hero nav {
+		display: block;
+	}
+
+	header.hero nav .brand img {
+		max-width: 100%;
+	}
+
+	header.hero nav ul {
+		margin: 1rem 0;
+		flex: none;
+		display: block;
+		padding: 0;
+	}
+
+	header.hero nav ul li a {
+		padding: 1rem 0.4rem;
+		font-size: 12px;
+		font-weight: bold;
+	}
+
+	header.hero .cta {
+		padding: 0 3rem;
+		margin-top: 0;
+	}
+
+	header.hero h1 {
+		font-size: 40px;
+		line-height: 10px;
+	}
+
+	header.hero .btn {
+		font-size: 25px;
+		line-height: 20px;
+		padding: 0.5rem 2rem;
+		border-radius: 22px;
+	}
+}
